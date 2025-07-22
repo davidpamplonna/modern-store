@@ -25,22 +25,23 @@ export default function Navbar() {
                 <div className="flex h-16 items-center justify-between">
                     {/* logo */}
                     <Link href="/" className="flex items-center space-x-2">
-                        <div className="h-8 w-8 rounded-full bg-gradient-to-r from-black via-gray-900 to-gray-700" />
+                        <div className="h-7 w-7 rounded-full bg-gradient-to-r from-black via-gray-900 to-gray-700" />
                         <span className="font-bold text-xl tracking-wide text-black">Modern Store</span>
                     </Link>
 
                     {/* desktop menu */}
-                    <div className="hidden md:flex items-center space-x-8">
+                    <ul className="hidden md:flex items-center space-x-8">
                         {navigation.map((item) => (
-                            <Link
-                                key={item.name}
+                            <li key={item.name}>
+                                <Link
                                 href={item.href}
                                 className={`text-gray-700 hover:text-gray-950 transition-colors duration-200 ${pathname === item.href ? 'font-semibold border-b border-gray-900' : ''}`}
                             >
                                 {item.name}
                             </Link>
+                            </li>
                         ))}
-                    </div>
+                    </ul>
 
                     {/* icons menu */}
                     <div className="flex items-center space-x-3">
@@ -58,6 +59,9 @@ export default function Navbar() {
                         </Button>
 
                         {/* mobile menu toggle */}
+                        <Button variant="ghost" size="sm" className=" md:hidden hover:bg-gray-200">
+                            <ShoppingBag className="h-4 w-4" />
+                        </Button>
                         <Button
                             variant="ghost"
                             size="sm"
@@ -78,15 +82,16 @@ export default function Navbar() {
                         ${isOpen ? 'max-h-[900px] py-4' : 'max-h-0 py-0'}
                     `}
                 >
-                    <div className="flex flex-col items-right space-y-4 px-3">
+                    <ul className="flex flex-col items-start space-y-4 px-3">
                         {navigation.map((item) => (
-                            <Link
-                                key={item.name}
+                            <li key={item.name}>
+                                <Link
                                 href={item.href}
                                 className={`text-gray-700 hover:text-gray-950 transition-colors duration-200 ${pathname === item.href ? 'font-semibold text-gray-900' : ''}`}
                             >
                                 {item.name}
                             </Link>
+                            </li>
                         ))}
                         <div className="flex items-center space-x-6 border-t border-gray-200 pt-4">
                            <Button variant="ghost" size="sm" className="hover:bg-gray-200 flex items-center space-x-2">
@@ -102,7 +107,7 @@ export default function Navbar() {
                             <span>Buscar</span>
                            </Button>
                         </div>
-                    </div>
+                    </ul>
                 </div>
             </div>
         </nav>
