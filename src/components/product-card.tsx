@@ -5,7 +5,7 @@ import { Badge } from "./ui/badge";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "./ui/button";
-import { Eye, ShoppingBag, Star } from "lucide-react";
+import { Eye, Heart, ShoppingBag, Star } from "lucide-react";
 
 export function ProductCard() {
 
@@ -23,8 +23,11 @@ export function ProductCard() {
                 className="w-full group-hover:scale-110 transition-transform duration-500 "
                 />
             </Link>
-            <div className=" absolute top-3 left-3 ">
-                <Badge className="absolute top-2 left-2 bg-red-500/80 text-white">50%</Badge>
+            <div className="absolute top-4 left-3 w-[330px] ">
+               <div className="flex items-center justify-between gap-2 top-2">
+                 <Badge className="bg-red-500/90 text-white">50%</Badge>
+                  <Heart className="w-6 h-6 text-gray-100 cursor-pointer" />
+               </div>
             </div>
         </div>
         <CardContent className="p-4">
@@ -53,7 +56,7 @@ export function ProductCard() {
                 </div>
                 <Button
                 variant="ghost"
-                className="w-full bg-black text-white hover:bg-black/90 transition-colors p-3">
+                className="w-full bg-black text-white hover:bg-black/90 transition-colors p-3 cursor-pointer">
                     <ShoppingBag className="w-4 h-4 mr-2" />
                    Adicionar ao carrinho
                 </Button>
