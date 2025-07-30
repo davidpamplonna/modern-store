@@ -30,7 +30,7 @@ export default function Navbar() {
                     </Link>
 
                     {/* desktop menu */}
-                    <ul className="hidden md:flex items-center space-x-8">
+                    <ul className="hidden lg:flex items-center space-x-8">
                         {navigation.map((item) => (
                             <li key={item.name}>
                                 <Link
@@ -65,7 +65,7 @@ export default function Navbar() {
                         <Button
                             variant="ghost"
                             size="sm"
-                            className="md:hidden hover:bg-gray-100"
+                            className="lg:hidden hover:bg-gray-100"
                             onClick={() => setIsOpen(!isOpen)}
                             aria-label="Abrir menu"
                             aria-expanded={isOpen}
@@ -78,7 +78,7 @@ export default function Navbar() {
                 {/* mobile navigation com transição */}
                 <div
                     className={`
-                        md:hidden overflow-hidden transition-all duration-600 ease-in-out
+                        lg:hidden overflow-hidden transition-all duration-600 ease-in-out
                         ${isOpen ? 'max-h-[900px] py-4' : 'max-h-0 py-0'}
                     `}
                 >
