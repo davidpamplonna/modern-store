@@ -129,8 +129,8 @@ export function HeroBanner() {
         key={index}
         onClick={() => setCurrentSlider(index)}
         aria-label={`Ir para slide ${index + 1}`}
-        className={`w-3 sm:w-5 h-1.5 sm:h-1.5 rounded-full transition-all duration-300 ${
-          index === currentSlider ? "bg-[#fb2c36]" : "bg-gray-400"
+        className={`w-3 sm:w-7 h-1.5 sm:h-1.5 rounded-md transition-all duration-300 ${
+          index === currentSlider ? "bg-black/80" : "bg-gray-400"
         }`}
       />
     ))}

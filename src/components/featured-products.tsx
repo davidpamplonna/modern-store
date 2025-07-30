@@ -1,4 +1,5 @@
 import ProductCard from "./product-card"
+import { Button } from "./ui/button"
 
 export function FeaturedProducts() {
     return (
@@ -17,7 +18,13 @@ export function FeaturedProducts() {
                 <ProductCard />
                 <ProductCard />
                 <ProductCard />
+             
             </div>
+            <div className="w-full flex items-center justify-center p-4 mt-4">
+                 <Button className=" w-full md:w-auto mx-auto bg-white text-black hover:bg-black/90 hover:text-white shadow-md px-6 py-4 transition-colors">
+                Ver mais produtos
+                </Button>
+             </div>
         </div>
          
        </section>

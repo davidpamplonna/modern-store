@@ -17,9 +17,10 @@ export function ProductCard() {
                 <Image
                 src='https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg'
                 alt="Product Image"
-                fill
+                width={300}
+                height={300}
                 loading="lazy"
-                className="w-full  group-hover:scale-110 transition-transform duration-500 "
+                className="w-full group-hover:scale-110 transition-transform duration-500 "
                 />
             </Link>
             <div className=" absolute top-3 left-3 ">
@@ -50,8 +51,15 @@ export function ProductCard() {
                     <span className="text-lg font-bold text-gray-900">R$ 12.50</span>
                      <span className="text-gray-500 line-through">R$ 25.00</span>
                 </div>
+                <Button
+                variant="ghost"
+                className="w-full bg-black text-white hover:bg-black/90 transition-colors p-3">
+                    <ShoppingBag className="w-4 h-4 mr-2" />
+                   Adicionar ao carrinho
+                </Button>
             </div>
         </CardContent>
+        
     </Card>
   );
 }
