@@ -1,3 +1,4 @@
+import { BrandsCarousel } from "@/components/brands-carousel";
 import { CategoriesGrid } from "@/components/categories-grid";
 import { DealsSection } from "@/components/deals-section";
 import FeaturedProducts from "@/components/featured-products";
@@ -10,6 +11,7 @@ export default function Home() {
       <CategoriesGrid />
       <FeaturedProducts />
       <DealsSection />
+      <BrandsCarousel />
     </div>
   );
 }
