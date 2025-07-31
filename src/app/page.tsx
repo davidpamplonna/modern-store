@@ -3,6 +3,7 @@ import { CategoriesGrid } from "@/components/categories-grid";
 import { DealsSection } from "@/components/deals-section";
 import FeaturedProducts from "@/components/featured-products";
 import HeroBanner from "@/components/hero-banner";
+import { NewsletterSignup } from "@/components/newletter-signup";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <FeaturedProducts />
       <DealsSection />
       <BrandsCarousel />
+      <NewsletterSignup />
     </div>
   );
 }
