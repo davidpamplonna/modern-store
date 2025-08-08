@@ -3,6 +3,7 @@ import { CategoriesGrid } from "@/components/categories-grid";
 import { DealsSection } from "@/components/deals-section";
 import FeaturedProducts from "@/components/featured-products";
 import HeroBanner from "@/components/hero-banner";
+import { Footer } from "@/components/layout/footer";
 import { NewsletterSignup } from "@/components/newletter-signup";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <DealsSection />
       <BrandsCarousel />
       <NewsletterSignup />
+      <Footer />
     </div>
   );
 }
